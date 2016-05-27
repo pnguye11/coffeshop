@@ -4,7 +4,7 @@
   <% @beans.each do |bean| %>
     <li>
       <strong><%= bean.name %></strong> - <%= bean.roast %> roast from
-      <% bean.origin %>
+      <%= bean.origin %>
     </li>
   <% end %>
 

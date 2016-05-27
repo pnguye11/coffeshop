@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'beans#index'
 
+  get "beans/new", to: "beans#new", as: :new_bean
   get "beans/:id", to: "beans#show", as: :bean
+
+  post "beans", to: "beans#create"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
