@@ -3,10 +3,11 @@
 <ul>
   <% @beans.each do |bean| %>
     <li>
-      <strong><%= bean.name %></strong> - <%= bean.roast %> roast from
+      <strong><%= link_to bean.name, bean_path(bean) %></strong> <%= bean.roast %>
       <%= bean.origin %>
     </li>
   <% end %>
 
 </ul>
 
+<%= link_to "Add a new bean!", new_bean_path %>
